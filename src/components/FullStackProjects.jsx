@@ -10,23 +10,21 @@ const fsProjects = [
     stack: "React, Node.js, MongoDB",
   },
   {
-    title: "Task Manager",
-    image: "https://via.placeholder.com/300x200",
-    live: "#",
-    github: "#",
-    stack: "Express, MongoDB, Tailwind",
+    title: "Portfolio website",
+    image: "/image1.png", // ✅ Correct path from public folder
+    live: "https://burhaanportfolio.netlify.app/",
+    github: "https://github.com/burhan8585/burhansportfolio.git",
+    stack: "React , Tailwind",
   },
 ];
 
 const FullStackProjects = () => {
-  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300 text-center">
-      {/* Animated Heading */}
       <motion.h2
         className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-10"
         initial={{ opacity: 0, y: -20 }}
@@ -54,13 +52,9 @@ const FullStackProjects = () => {
             <h3 className="mt-4 font-semibold text-gray-800 dark:text-white">
               {project.title}
             </h3>
-
-            {/* Stack Info */}
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               Tech: {project.stack}
             </p>
-
-            {/* Links */}
             <div className="mt-3 flex justify-center gap-4">
               <a
                 href={project.live}
